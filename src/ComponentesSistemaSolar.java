@@ -28,7 +28,6 @@ public enum ComponentesSistemaSolar {// ESTRELA
         this.cor = cor;
     }
 
-    public String getNome() { return nome; }
     public double getDiametroKm() { return diametroKm; }
     public double getDistanciaSolMilhoesKm() { return distanciaSolMilhoesKm; }
     public Color getCor() { return cor; }
@@ -43,10 +42,6 @@ public enum ComponentesSistemaSolar {// ESTRELA
         return 1.0 / periodoTranslacaoAnos;
     }
 
-    /**
-     * Velocidade Angular de Rotação (Giro no próprio eixo).
-     * Quanto maior o período (dias), menor a velocidade.
-     */
     public double getVelocidadeRotacao() {
         if (periodoRotacaoDias == 0) return 0;
         return 1.0 / periodoRotacaoDias;
