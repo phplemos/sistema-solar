@@ -14,8 +14,8 @@ public enum ComponentesSistemaSolar {// ESTRELA
     private final String nome;
     private final double diametroKm;
     private final double distanciaSolMilhoesKm;
-    private final double periodoTranslacaoAnos; // Define velocidade de translação
-    private final double periodoRotacaoDias;    // Define velocidade de rotação
+    private final double periodoTranslacaoAnos;
+    private final double periodoRotacaoDias;
     private final Color cor;
 
     ComponentesSistemaSolar(String nome, double diametroKm, double distanciaSolMilhoesKm,
@@ -32,11 +32,6 @@ public enum ComponentesSistemaSolar {// ESTRELA
     public double getDistanciaSolMilhoesKm() { return distanciaSolMilhoesKm; }
     public Color getCor() { return cor; }
 
-    /**
-     * Velocidade Angular de Translação (Órbita).
-     * Retorna 0 para o Sol.
-     * Quanto maior o período (anos), menor a velocidade.
-     */
     public double getVelocidadeTranslacao() {
         if (periodoTranslacaoAnos == 0) return 0;
         return 1.0 / periodoTranslacaoAnos;

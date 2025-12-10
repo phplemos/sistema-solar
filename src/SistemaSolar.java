@@ -116,7 +116,6 @@ public class SistemaSolar extends JPanel implements MouseWheelListener, ActionLi
         // Transformação temporaria
         AffineTransform zoomAtMouse = new AffineTransform();
 
-        // 1. Move o Universo para que o mouse seja o novo centro
         zoomAtMouse.translate(mouseX, mouseY);
 
         zoomAtMouse.scale(zoomFactor, zoomFactor);
